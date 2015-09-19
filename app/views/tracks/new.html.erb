@@ -1,0 +1,12 @@
+<h1>Tracks#new</h1>
+<p>Find me in app/views/tracks/new.html.erb</p>
+<%= form_for :track do |f| %>
+  <p>
+    <%= f.label :url %><br>
+    <%= f.text_area :url %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

@@ -10,18 +10,19 @@ Things you may want to cover:
 * System dependencies
 
 * Configuration
+postgres:
+https://gist.github.com/lxneng/741932
+http://www.postgresql.org/docs/9.1/static/app-createuser.html
+createuser -P -s -e playtape
+pass: camus
+start server: pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 
-* Database creation
+npm+react+browserify frontend setup:
+http://ttrmw.co.uk/code/rails_and_react_with_npm_modules.html
+https://medium.com/technically-speaking/rails-react-browserify-e315001d5974
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+npm install react-soundplayer --save
+npm install babelify
 
 
 Please feel free to use a different markup language if you do not plan to run
