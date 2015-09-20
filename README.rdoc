@@ -16,12 +16,21 @@ Things you may want to cover:
 * createuser -P -s -e playtape
 * pass: camus
 
-* start server: pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 
 = npm+react+browserify frontend setup:
 
 * http://ttrmw.co.uk/code/rails_and_react_with_npm_modules.html
 
+= start
+
+* start server: pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+
 * $ npm install //install dependencies
 
 * $ webpack -wc //starts webpack, which compiles all javascripts in a bundle file, which is served to application.js. see webpack.config.js
+
+* rails s
+
+* in console: create track, craete playtape, set associations
+
+* go to localhost:3000/playtapes/get?id=1
