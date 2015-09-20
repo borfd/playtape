@@ -25,15 +25,20 @@ var scPlayer = new SoundCloudAudio('29a02c386427f70233fd17a8f38cb051');
 
 var Sound = React.createClass({
 
+  getInitialState: function() {
+    return { url: document.getElementsByClassName('track_identifier'), pos: 0 };
+  },
+
   play: function () {
 
       // // if you have an api stream url you can just play it like that
       // scPlayer.play({streamUrl: 'https://api.soundcloud.com/tracks/185533328/stream'});
 
       // OR in other cases you need to load TRACK and resolve it's data
-      var url = document.getElementById('identifier').value();
+      var track = this.state.url[this.state.pos].innerHTML
+      console.log(track)
 
-      scPlayer.resolve(url, function (err, track) {
+      scPlayer.resolve(track, function (err, track) {
           // do smth with track object
           // e.g. display data in a view etc.
           console.log(track); 
@@ -43,7 +48,11 @@ var Sound = React.createClass({
 
           // stop playing track and keep silence
           // scPlayer.pause();
+          scPlayer.on('timeupdate', function (audio) {
+              console.log(scPlayer.audio.currentTime);
+          });
       });
+
   },
   pause: function () {
 
@@ -68,5 +77,5 @@ var Sound = React.createClass({
 });
 React.render(
   <Sound />,
-  document.getElementById('content')
+  document.getElementById('controls')
 );
