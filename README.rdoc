@@ -22,4 +22,6 @@ Things you may want to cover:
 
 * http://ttrmw.co.uk/code/rails_and_react_with_npm_modules.html
 
-* npm install
+* $ npm install //install dependencies
+
+* $ webpack -wc //starts webpack, which compiles all javascripts in a bundle file, which is served to application.js. see webpack.config.js
